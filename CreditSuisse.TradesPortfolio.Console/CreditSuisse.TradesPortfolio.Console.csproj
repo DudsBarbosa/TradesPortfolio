@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Application\CreditSuisse.TradesPortfolio.Application.csproj" />
+    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Domain\CreditSuisse.TradesPortfolio.Domain.csproj" />
+    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Infrastructure\CreditSuisse.TradesPortfolio.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
