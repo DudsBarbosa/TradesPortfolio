@@ -10,8 +10,4 @@
     <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Domain\CreditSuisse.TradesPortfolio.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
