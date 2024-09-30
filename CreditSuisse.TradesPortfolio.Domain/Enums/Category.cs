@@ -13,6 +13,8 @@ namespace CreditSuisse.TradesPortfolio.Domain.Enums
         // Trades with value greater than 1,000,000 and client from Private Sector.
         HighRisk,
         // Trades with value greater than 1,000,000 and client from Public Sector.
-        MediumRisk
+        MediumRisk,
+        // Trades not categorized.
+        Uncategorized
     }
 }

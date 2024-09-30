@@ -13,23 +13,28 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
             var tradeList = GetMockTrades(quantityOfRates);
             if (tradeList != null && tradeList.Count != 0)
             {
+                Category category = new Category();
                 foreach (var trade in tradeList)
                 {
                     if (trade.NextPaymentDate < referenceDate.AddDays(30))
                     {
-                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {CreditSuisse.TradesPortfolio.Domain.Enums.Category.Expired}");
+                        category.Description = Enums.Category.Expired.ToString();
+                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
                     else if (trade.Value > 1000000 && trade.ClientSector == CreditSuisse.TradesPortfolio.Domain.Enums.ClientSector.Private.ToString())
                     {
-                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {CreditSuisse.TradesPortfolio.Domain.Enums.Category.HighRisk}");
+                        category.Description = Enums.Category.HighRisk.ToString();
+                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
                     else if (trade.Value > 1000000 && trade.ClientSector == CreditSuisse.TradesPortfolio.Domain.Enums.ClientSector.Public.ToString())
                     {
-                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {CreditSuisse.TradesPortfolio.Domain.Enums.Category.MediumRisk}");
+                        category.Description = Enums.Category.MediumRisk.ToString();
+                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
                     else
                     {
-                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | Uncategorized");
+                        category.Description = Enums.Category.Uncategorized.ToString();
+                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
                 }
             }
