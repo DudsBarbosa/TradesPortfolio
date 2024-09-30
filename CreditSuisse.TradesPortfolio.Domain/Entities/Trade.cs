@@ -14,5 +14,7 @@ namespace CreditSuisse.TradesPortfolio.Domain.Entities
         public string? ClientSector { get; set; }
         //indicates when the next payment from the client to the bank is expected
         public DateTime NextPaymentDate { get; set; }
+        // Politically exposed person
+        public bool IsPoliticallyExposed { get; set; }
     }
 }

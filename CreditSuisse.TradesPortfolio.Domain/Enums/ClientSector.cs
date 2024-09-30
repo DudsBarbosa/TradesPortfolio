@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CreditSuisse.TradesPortfolio.Domain.Enums
 {
-    public enum ClientSector
+    internal enum ClientSector
     {
         Public,
         Private

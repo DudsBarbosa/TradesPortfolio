@@ -7,6 +7,16 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
 {
     public class CategoryService : ICategory
     {
+        void ICategory.Add(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICategory.Delete(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
         IEnumerable<string> ICategory.GetByQuantityAndReferenceDate(int quantityOfRates, DateTime referenceDate)
         {
             List<string> tradeInfoValue = new List<string>();
@@ -21,14 +31,19 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
                         category.Description = Enums.Category.Expired.ToString();
                         tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
-                    else if (trade.Value > 1000000 && trade.ClientSector == CreditSuisse.TradesPortfolio.Domain.Enums.ClientSector.Private.ToString())
+                    else if (trade.Value > 1000000 && trade.ClientSector == ClientSector.Private.ToString() && !trade.IsPoliticallyExposed)
                     {
                         category.Description = Enums.Category.HighRisk.ToString();
                         tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
-                    else if (trade.Value > 1000000 && trade.ClientSector == CreditSuisse.TradesPortfolio.Domain.Enums.ClientSector.Public.ToString())
+                    else if (trade.Value > 1000000 && trade.ClientSector == ClientSector.Public.ToString() && !trade.IsPoliticallyExposed)
                     {
                         category.Description = Enums.Category.MediumRisk.ToString();
+                        tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
+                    }
+                    else if (trade.Value > 5000000 && trade.ClientSector == ClientSector.Public.ToString() && trade.IsPoliticallyExposed)
+                    {
+                        category.Description = Enums.Category.Pep.ToString();
                         tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");
                     }
                     else
@@ -39,6 +54,11 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
                 }
             }
             return tradeInfoValue;
+        }
+
+        Category ICategory.GetCategory(int id)
+        {
+            throw new NotImplementedException();
         }
 
         private List<Trade> GetMockTrades(int quantityOfRates)
@@ -53,7 +73,8 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
                 {
                     Value = tradeValue,
                     ClientSector = tradeValue % 2 == 0 ? ClientSector.Private.ToString() : ClientSector.Public.ToString(),
-                    NextPaymentDate = GetRandomPaymentDate()
+                    NextPaymentDate = GetRandomPaymentDate(),
+                    IsPoliticallyExposed = tradeValue % 2 != 0 && tradeValue > 5000000 ? true : false
                 };
 
                 mockListOfTrades.Add(objTrade);
@@ -67,6 +88,11 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
             DateTime start = new DateTime(2024, 1, 1);
             int range = (DateTime.Today - start).Days;
             return start.AddDays(gen.Next(range));
+        }
+
+        void ICategory.Update(Category category)
+        {
+            throw new NotImplementedException();
         }
     }
 }

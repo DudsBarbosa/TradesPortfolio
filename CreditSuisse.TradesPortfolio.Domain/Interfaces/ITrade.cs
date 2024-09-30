@@ -9,7 +9,6 @@ namespace CreditSuisse.TradesPortfolio.Domain.Interfaces
 {
     public interface ITrade
     {
-        public void Add(Trade trade);
         IEnumerable<Trade> GetAll(Trade trades);
     }
 }
