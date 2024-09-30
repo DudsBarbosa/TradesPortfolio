@@ -7,16 +7,6 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
 {
     public class CategoryService : ICategory
     {
-        void ICategory.Add(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICategory.Delete(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
         IEnumerable<string> ICategory.GetByQuantityAndReferenceDate(int quantityOfRates, DateTime referenceDate)
         {
             List<string> tradeInfoValue = new List<string>();
@@ -57,11 +47,6 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
             return tradeInfoValue;
         }
 
-        Category ICategory.GetCategory(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         private List<Trade> GetMockTrades(int quantityOfRates)
         {
             Random randomTradeValue = new Random();
@@ -89,11 +74,6 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
             DateTime start = new DateTime(2024, 1, 1);
             int range = (DateTime.Today - start).Days;
             return start.AddDays(gen.Next(range));
-        }
-
-        void ICategory.Update(Category category)
-        {
-            throw new NotImplementedException();
         }
     }
 }
