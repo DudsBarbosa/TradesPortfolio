@@ -1,5 +1,4 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Entities;
-using Category = CreditSuisse.TradesPortfolio.Domain.Entities.Category;
+﻿using Category = CreditSuisse.TradesPortfolio.Domain.Entities.Category;
 
 namespace CreditSuisse.TradesPortfolio.Domain.Interfaces
 {

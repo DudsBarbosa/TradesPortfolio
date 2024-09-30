@@ -1,10 +1,4 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Entities;
-using CreditSuisse.TradesPortfolio.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CreditSuisse.TradesPortfolio.Domain.Interfaces;
 
 namespace CreditSuisse.TradesPortfolio.Application.UseCases
 {

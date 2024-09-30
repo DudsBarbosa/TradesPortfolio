@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CreditSuisse.TradesPortfolio.Domain.Enums
+﻿namespace CreditSuisse.TradesPortfolio.Domain.Enums
 {
     public enum Category
     {
@@ -18,5 +12,5 @@ namespace CreditSuisse.TradesPortfolio.Domain.Enums
         Uncategorized,
         // Politically exposed person
         Pep
-}
+    }
 }
