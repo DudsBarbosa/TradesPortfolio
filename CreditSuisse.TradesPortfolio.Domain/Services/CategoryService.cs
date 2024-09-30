@@ -26,7 +26,8 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
                 Category category = new Category();
                 foreach (var trade in tradeList)
                 {
-                    if (trade.NextPaymentDate < referenceDate.AddDays(30))
+                    var totalDaysNextPayment = trade.NextPaymentDate.Subtract(referenceDate).TotalDays;
+                    if (totalDaysNextPayment > 30)
                     {
                         category.Description = Enums.Category.Expired.ToString();
                         tradeInfoValue.Add($"{trade.Value} {trade.ClientSector} {trade.NextPaymentDate:MM/dd/yyyy} | {category.Description}");

@@ -1,7 +1,5 @@
 ﻿
 using CreditSuisse.TradesPortfolio.Application.UseCases;
-using CreditSuisse.TradesPortfolio.Domain.Entities;
-using CreditSuisse.TradesPortfolio.Domain.Enums;
 using CreditSuisse.TradesPortfolio.Domain.Services;
 using System.Globalization;
 
@@ -14,7 +12,9 @@ internal class Program
         // Input reference date
         Console.WriteLine("Please, input reference date in mm/dd/yyyy format.");
         string? inputReferenceDate = Console.ReadLine();
-        if (string.IsNullOrWhiteSpace(inputReferenceDate) || !DateTime.TryParse(inputReferenceDate, out DateTime referenceDate))
+        string format = "MM/dd/yyyy";
+        DateTime referenceDate;
+        if (string.IsNullOrWhiteSpace(inputReferenceDate) || !DateTime.TryParseExact(inputReferenceDate, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out referenceDate))
         {
             Console.WriteLine("Please, input reference date in mm/dd/yyyy format.");
             return;
@@ -29,7 +29,7 @@ internal class Program
             return;
         }
 
-        Console.WriteLine("\n");        
+        Console.WriteLine("\n");
         OutputCategories(referenceDate, quantityOfRates);
     }
 
@@ -39,9 +39,9 @@ internal class Program
         var classifiedTrades = new ClassifyTradesByQuantityAndReferenceDate(categoryService);
         var tradesResult = classifiedTrades.GetCategory(referenceDate, quantityOfRates);
 
-        Console.WriteLine("------------- Output:\n");        
+        Console.WriteLine("------------- Output:\n");
         foreach (var trade in tradesResult)
-        {            
+        {
             Console.WriteLine($"{trade}");
         }
     }
