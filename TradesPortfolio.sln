@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Console", "CreditSuisse.TradesPortfolio.Console\CreditBank.TradesPortfolio.Console.csproj", "{9EC5605D-C990-48CC-AAEA-AFF17A1AFEAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Infrastructure", "CreditBank.TradesPortfolio.Infrastructure\CreditBank.TradesPortfolio.Infrastructure.csproj", "{6B97853B-D806-484F-80E6-F1F9E2990F12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Domain", "CreditSuisse.TradesPortfolio.Domain\CreditBank.TradesPortfolio.Domain.csproj", "{68A7D8E7-743A-411A-A7DD-D4D090E09735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Domain", "CreditBank.TradesPortfolio.Domain\CreditBank.TradesPortfolio.Domain.csproj", "{C2248CE5-8926-4CCB-A1D5-8826ACEE03FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Application", "CreditSuisse.TradesPortfolio.Application\CreditBank.TradesPortfolio.Application.csproj", "{1AFD785F-FD4C-48DF-92A6-948A01DAA303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Application", "CreditBank.TradesPortfolio.Application\CreditBank.TradesPortfolio.Application.csproj", "{36F2688F-9451-4DFC-BEAD-AC2371BAEA28}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Infrastructure", "CreditSuisse.TradesPortfolio.Infrastructure\CreditBank.TradesPortfolio.Infrastructure.csproj", "{34072720-36C4-4317-A2EF-436941601FCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditBank.TradesPortfolio.Console", "CreditBank.TradesPortfolio.Console\CreditBank.TradesPortfolio.Console.csproj", "{370F5053-D3EF-47CD-879F-849EE1A1EE02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9EC5605D-C990-48CC-AAEA-AFF17A1AFEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EC5605D-C990-48CC-AAEA-AFF17A1AFEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EC5605D-C990-48CC-AAEA-AFF17A1AFEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EC5605D-C990-48CC-AAEA-AFF17A1AFEAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68A7D8E7-743A-411A-A7DD-D4D090E09735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68A7D8E7-743A-411A-A7DD-D4D090E09735}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68A7D8E7-743A-411A-A7DD-D4D090E09735}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68A7D8E7-743A-411A-A7DD-D4D090E09735}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AFD785F-FD4C-48DF-92A6-948A01DAA303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AFD785F-FD4C-48DF-92A6-948A01DAA303}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AFD785F-FD4C-48DF-92A6-948A01DAA303}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AFD785F-FD4C-48DF-92A6-948A01DAA303}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34072720-36C4-4317-A2EF-436941601FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34072720-36C4-4317-A2EF-436941601FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34072720-36C4-4317-A2EF-436941601FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34072720-36C4-4317-A2EF-436941601FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B97853B-D806-484F-80E6-F1F9E2990F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B97853B-D806-484F-80E6-F1F9E2990F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B97853B-D806-484F-80E6-F1F9E2990F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B97853B-D806-484F-80E6-F1F9E2990F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2248CE5-8926-4CCB-A1D5-8826ACEE03FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2248CE5-8926-4CCB-A1D5-8826ACEE03FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2248CE5-8926-4CCB-A1D5-8826ACEE03FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2248CE5-8926-4CCB-A1D5-8826ACEE03FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F2688F-9451-4DFC-BEAD-AC2371BAEA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F2688F-9451-4DFC-BEAD-AC2371BAEA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F2688F-9451-4DFC-BEAD-AC2371BAEA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F2688F-9451-4DFC-BEAD-AC2371BAEA28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370F5053-D3EF-47CD-879F-849EE1A1EE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370F5053-D3EF-47CD-879F-849EE1A1EE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370F5053-D3EF-47CD-879F-849EE1A1EE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370F5053-D3EF-47CD-879F-849EE1A1EE02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

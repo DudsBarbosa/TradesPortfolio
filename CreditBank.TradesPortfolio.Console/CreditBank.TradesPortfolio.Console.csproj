@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Application\CreditBank.TradesPortfolio.Application.csproj" />
-    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Domain\CreditBank.TradesPortfolio.Domain.csproj" />
+    <ProjectReference Include="..\CreditBank.TradesPortfolio.Application\CreditBank.TradesPortfolio.Application.csproj" />
+    <ProjectReference Include="..\CreditBank.TradesPortfolio.Domain\CreditBank.TradesPortfolio.Domain.csproj" />
   </ItemGroup>
 
 </Project>
