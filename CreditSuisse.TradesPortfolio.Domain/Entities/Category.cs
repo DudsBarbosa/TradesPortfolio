@@ -1,4 +1,4 @@
-﻿namespace CreditSuisse.TradesPortfolio.Domain.Entities
+﻿namespace CreditBank.TradesPortfolio.Domain.Entities
 {
     public class Category
     {

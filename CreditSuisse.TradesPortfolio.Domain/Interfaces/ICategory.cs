@@ -1,6 +1,4 @@
-﻿using Category = CreditSuisse.TradesPortfolio.Domain.Entities.Category;
-
-namespace CreditSuisse.TradesPortfolio.Domain.Interfaces
+﻿namespace CreditBank.TradesPortfolio.Domain.Interfaces
 {
     public interface ICategory
     {

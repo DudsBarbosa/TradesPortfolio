@@ -1,13 +1,6 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Entities;
-using CreditSuisse.TradesPortfolio.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CreditBank.TradesPortfolio.Domain.Entities;
 
-namespace CreditSuisse.TradesPortfolio.Infrastructure.Repositories
+namespace CreditBank.TradesPortfolio.Infrastructure.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

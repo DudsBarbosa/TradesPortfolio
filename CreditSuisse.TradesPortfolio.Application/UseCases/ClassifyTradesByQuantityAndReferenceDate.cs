@@ -1,6 +1,6 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Interfaces;
+﻿using CreditBank.TradesPortfolio.Domain.Interfaces;
 
-namespace CreditSuisse.TradesPortfolio.Application.UseCases
+namespace CreditBank.TradesPortfolio.Application.UseCases
 {
     public class ClassifyTradesByQuantityAndReferenceDate
     {

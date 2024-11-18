@@ -1,13 +1,12 @@
-﻿
-using CreditSuisse.TradesPortfolio.Application.UseCases;
-using CreditSuisse.TradesPortfolio.Domain.Services;
+﻿using CreditBank.TradesPortfolio.Application.UseCases;
+using CreditBank.TradesPortfolio.Domain.Services;
 using System.Globalization;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to Credit Suisse trades portfolio application.\n");
+        Console.WriteLine("Welcome to CreditBank trades portfolio application.\n");
 
         // Input reference date
         Console.WriteLine("Please, input reference date in mm/dd/yyyy format.");

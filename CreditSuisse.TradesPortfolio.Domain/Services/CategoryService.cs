@@ -1,19 +1,19 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Entities;
-using CreditSuisse.TradesPortfolio.Domain.Enums;
-using CreditSuisse.TradesPortfolio.Domain.Interfaces;
-using Category = CreditSuisse.TradesPortfolio.Domain.Entities.Category;
+﻿using CreditBank.TradesPortfolio.Domain.Entities;
+using CreditBank.TradesPortfolio.Domain.Enums;
+using CreditBank.TradesPortfolio.Domain.Interfaces;
+using Category = CreditBank.TradesPortfolio.Domain.Entities.Category;
 
-namespace CreditSuisse.TradesPortfolio.Domain.Services
+namespace CreditBank.TradesPortfolio.Domain.Services
 {
     public class CategoryService : ICategory
     {
         IEnumerable<string> ICategory.GetByQuantityAndReferenceDate(int quantityOfRates, DateTime referenceDate)
         {
-            List<string> tradeInfoValue = new List<string>();
+            List<string> tradeInfoValue = [];
             var tradeList = GetMockTrades(quantityOfRates);
             if (tradeList != null && tradeList.Count != 0)
             {
-                Category category = new Category();
+                Category category = new();
                 foreach (var trade in tradeList)
                 {
                     var totalDaysNextPayment = trade.NextPaymentDate.Subtract(referenceDate).TotalDays;
@@ -49,8 +49,8 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
 
         private List<Trade> GetMockTrades(int quantityOfRates)
         {
-            Random randomTradeValue = new Random();
-            Random randomClientSector = new Random();
+            Random randomTradeValue = new();
+            Random randomClientSector = new();
             var mockListOfTrades = new List<Trade>();
             for (int i = 0; i < quantityOfRates; i++)
             {
@@ -60,7 +60,7 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
                     Value = tradeValue,
                     ClientSector = tradeValue % 2 == 0 ? ClientSector.Private.ToString() : ClientSector.Public.ToString(),
                     NextPaymentDate = GetRandomPaymentDate(),
-                    IsPoliticallyExposed = tradeValue % 2 != 0 && tradeValue > 5000000 ? true : false
+                    IsPoliticallyExposed = tradeValue % 2 != 0 && tradeValue > 5000000
                 };
 
                 mockListOfTrades.Add(objTrade);
@@ -71,7 +71,7 @@ namespace CreditSuisse.TradesPortfolio.Domain.Services
         private DateTime GetRandomPaymentDate()
         {
             Random gen = new();
-            DateTime start = new DateTime(2024, 1, 1);
+            DateTime start = new(2024, 1, 1);
             int range = (DateTime.Today - start).Days;
             return start.AddDays(gen.Next(range));
         }

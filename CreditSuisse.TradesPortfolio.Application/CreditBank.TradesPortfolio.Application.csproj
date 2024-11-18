@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Domain\CreditSuisse.TradesPortfolio.Domain.csproj" />
+    <ProjectReference Include="..\CreditSuisse.TradesPortfolio.Domain\CreditBank.TradesPortfolio.Domain.csproj" />
   </ItemGroup>
 
 </Project>

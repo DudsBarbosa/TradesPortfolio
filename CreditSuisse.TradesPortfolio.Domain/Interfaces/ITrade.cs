@@ -1,6 +1,6 @@
-﻿using CreditSuisse.TradesPortfolio.Domain.Entities;
+﻿using CreditBank.TradesPortfolio.Domain.Entities;
 
-namespace CreditSuisse.TradesPortfolio.Domain.Interfaces
+namespace CreditBank.TradesPortfolio.Domain.Interfaces
 {
     public interface ITrade
     {

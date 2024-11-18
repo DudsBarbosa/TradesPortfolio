@@ -1,4 +1,4 @@
-﻿namespace CreditSuisse.TradesPortfolio.Domain.Enums
+﻿namespace CreditBank.TradesPortfolio.Domain.Enums
 {
     public enum Category
     {
